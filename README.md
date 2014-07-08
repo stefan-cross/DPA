@@ -1,0 +1,1 @@
+Apply Design Patterns to a Conference Management System
