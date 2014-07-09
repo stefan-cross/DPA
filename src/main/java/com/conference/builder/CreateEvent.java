@@ -59,6 +59,21 @@ public class CreateEvent {
             e.printStackTrace();
         }
 
+        // set reviewer preferences
+        // Create our conf Chair/Admin
+        Preferences pref = new Preferences();
+        System.out.println("-------------------- Review Preferences  -------------------");
+        System.out.println("Anonymous reviewing:");
+        pref.setAnonymousReviewing(Boolean.valueOf(br.readLine()));
+        System.out.println("Reviewers view all submissions:");
+        pref.setReviewersToViewAllSubs(Boolean.valueOf(br.readLine()));
+
+        System.out.println("-------------------- Chair Details  -------------------");
+        System.out.println("First Name:");
+        user.setFirstname(br.readLine());
+        System.out.println("Surname Name:");
+        user.setSurname(br.readLine());
+
 
         System.out.println("Step up complete, the conference details are:");
         System.out.println(event.getName());
