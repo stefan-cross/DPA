@@ -12,4 +12,8 @@ public class RoleDecorator extends Role{
     public RoleDecorator(Role role) {this.role = role;}
 
     public void add() { role.add(); }
+
+    public void showOptions(){
+
+    }
 }
