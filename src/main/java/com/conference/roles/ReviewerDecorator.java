@@ -7,11 +7,17 @@ package main.java.com.conference.roles;
  * Time: 18:42
  */
 public class ReviewerDecorator extends RoleDecorator {
+
     public ReviewerDecorator(Role role) {
         super(role);
     }
 
-    public void reviewSubmission () {
-        System.out.println("Reviewer has given a submission review");
+    public void add() {
+        System.out.println("Reviewer role granted.");
+        role.add();
+    }
+
+    public void showOptions () {
+        System.out.println("Reviewer menu options (Level 2)");
     }
 }

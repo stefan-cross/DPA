@@ -18,33 +18,26 @@ import java.util.Locale;
  */
 public class CreateEvent {
 
+    private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
     public Conference BuildEvent() throws IOException {
 
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        new General().getWelcome();
-
         // Create our conference event
-        Conference event = new Conference();
+        Conference conference = new Conference();
         System.out.println("Please follow the conference creation steps.");
         System.out.println("-------------------- Conference Details  -------------------");
         System.out.println("Conference name:");
-        event.setName(br.readLine());
-
+        conference.setName(br.readLine());
         System.out.println("URL:");
-        event.setUrl(br.readLine());
-
+        conference.setUrl(br.readLine());
         System.out.println("Conference notice:");
-        event.setSignupNotice(br.readLine());
-
+        conference.setSignupNotice(br.readLine());
         System.out.println("Signup key:");
-        event.setSignupKey(br.readLine());
+        conference.setSignupKey(br.readLine());
 
 
         // Create our conf Chair/Admin
         User user = User.getInstance();
-
         System.out.println("-------------------- Chair Details  -------------------");
         System.out.println("First Name:");
         user.setFirstname(br.readLine());
@@ -59,8 +52,7 @@ public class CreateEvent {
             e.printStackTrace();
         }
 
-        // set reviewer preferences
-        // Create our conf Chair/Admin
+        // Set reviewer preferences
         Preferences pref = new Preferences();
         System.out.println("-------------------- Review Preferences  -------------------");
         System.out.println("Anonymous reviewing:");
@@ -68,6 +60,7 @@ public class CreateEvent {
         System.out.println("Reviewers view all submissions:");
         pref.setReviewersToViewAllSubs(Boolean.valueOf(br.readLine()));
 
+        // Create our conf Chair/Admin
         System.out.println("-------------------- Chair Details  -------------------");
         System.out.println("First Name:");
         user.setFirstname(br.readLine());
@@ -76,16 +69,16 @@ public class CreateEvent {
 
 
         System.out.println("Step up complete, the conference details are:");
-        System.out.println(event.getName());
-        System.out.println(event.getUrl());
-        System.out.println(event.getSignupNotice());
-        System.out.println(event.getLanguage());
+        System.out.println(conference.getName());
+        System.out.println(conference.getUrl());
+        System.out.println(conference.getSignupNotice());
+        System.out.println(conference.getLanguage());
         System.out.println("the chair detials are:");
         System.out.println(user.getFirstname());
         System.out.println(user.getSurname());
         System.out.println(user.getEmail());
         System.out.println(user.getDob());
 
-        return event;
+        return conference;
     }
 }

@@ -12,22 +12,13 @@ import java.io.InputStreamReader;
  */
 public class Rebuttal implements Discussion {
 
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     String comment = null;
-    
 
-    public void comment() throws IOException {
-        System.out.println("Please submit your rebuttal");
-        comment = br.readLine();
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
-    @Override
     public String getComment() {
-        return null;
-    }
-
-    @Override
-    public void setComment() throws IOException {
-
+        return comment;
     }
 }

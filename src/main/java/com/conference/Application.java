@@ -52,11 +52,7 @@ public class Application {
 
         Conference event = new CreateEvent().BuildEvent();
 
-        Role role = new Role();
-        UserDecorator user = new UserDecorator(role);
-        ChairDecorator admin = new ChairDecorator(user);
 
-        admin.add();
 
 
 

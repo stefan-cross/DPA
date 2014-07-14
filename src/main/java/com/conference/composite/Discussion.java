@@ -12,5 +12,5 @@ public interface Discussion {
 
     public String getComment();
 
-    public void setComment() throws IOException;
+    public void setComment(String comment) throws IOException;
 }

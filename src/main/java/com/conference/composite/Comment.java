@@ -12,17 +12,13 @@ import java.io.InputStreamReader;
  */
 public class Comment implements Discussion {
 
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     String comment = null;
 
-    @Override
     public String getComment() {
         return comment;
     }
 
-    @Override
-    public void setComment() throws IOException {
-        System.out.println("Please submit your comment");
-        comment = br.readLine();
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }

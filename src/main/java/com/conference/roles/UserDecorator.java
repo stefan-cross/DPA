@@ -7,6 +7,7 @@ package main.java.com.conference.roles;
  * Time: 14:34
  */
 public class UserDecorator extends RoleDecorator{
+
     public UserDecorator(Role role) {
         super(role);
     }
@@ -16,4 +17,7 @@ public class UserDecorator extends RoleDecorator{
         role.add();
     }
 
+    public void showOptions(){
+        System.out.println("User menu options (Level4)");
+    }
 }

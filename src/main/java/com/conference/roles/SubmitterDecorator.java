@@ -16,7 +16,8 @@ public class SubmitterDecorator extends RoleDecorator{
         role.add();
     }
 
-    public void submitWork(){
-        System.out.println("Submitter role granted");
+    public void showOptions(){
+        System.out.println("Submitter menu options (Level3)");
     }
+
 }

@@ -16,11 +16,9 @@ public class DiscussionItemGroup {
 
     public void listComments() {
         for(Discussion discussion: discussions){
-            discussion.getComment();
+            System.out.println(discussion.getComment());
         }
     }
-
-
 
     public List<Discussion> getDiscussions() {
         return discussions;

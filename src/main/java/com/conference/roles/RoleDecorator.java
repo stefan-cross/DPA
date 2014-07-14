@@ -7,13 +7,15 @@ package main.java.com.conference.roles;
  * Time: 21:30
  */
 public class RoleDecorator extends Role{
+
     protected Role role;
+    protected Role options;
 
     public RoleDecorator(Role role) {this.role = role;}
 
     public void add() { role.add(); }
 
     public void showOptions(){
-
+        options.showOptions();
     }
 }
