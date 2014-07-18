@@ -7,9 +7,8 @@ package main.java.com.conference.observer;
  * Time: 15:29
  */
 public class Review implements Observer {
-    public void setComment(String comment){System.out.println("Comment added:" + comment);}
+    public void comment(String comment){System.out.println("Comment added:" + comment);}
 
     @Override
-    public void update() { this.setComment("This is an example comment.");}
-
+    public void update() { this.comment("This is an example update.");}
 }

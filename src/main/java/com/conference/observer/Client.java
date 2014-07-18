@@ -9,10 +9,17 @@ package main.java.com.conference.observer;
 public class Client {
 
     public static void main(String[] args){
-        Submission submission = new Submission();
-        Review review = new Review();
 
-        submission.attachObserver(review);
-        submission.comment();
+        Submission submission = new Submission();
+
+        Review reviewer1 = new Review();
+        Review reviewer2 = new Review();
+        Review reviewer3 = new Review();
+
+        submission.attachObserver(reviewer1);
+        submission.attachObserver(reviewer2);
+        submission.attachObserver(reviewer3);
+
+        submission.change();
     }
 }
