@@ -10,17 +10,15 @@ import java.util.List;
  * Date: 11/07/2014
  * Time: 10:23
  */
-public class DiscussionItemGroup {
+public class DiscussionItemGroup<D> {
 
-    private List<Discussion> discussions = new ArrayList<Discussion>();
+    private ArrayList<D> discussions = new ArrayList<D>();
 
     public void listComments() {
-        for(Discussion discussion: discussions){
-            System.out.println(discussion.getComment());
+        for(D discussion: discussions){
+            System.out.println(discussion.toString());
         }
     }
 
-    public List<Discussion> getDiscussions() {
-        return discussions;
-    }
+    public List<D> getDiscussions() { return discussions;}
 }

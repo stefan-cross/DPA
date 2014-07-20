@@ -31,19 +31,22 @@ public class Client {
         rebuttal.setComment(br.readLine());
 
         DiscussionItemGroup group = new DiscussionItemGroup();
+        DiscussionItemGroup group2 = new DiscussionItemGroup();
 
-        System.out.println("Listing review:");
         group.getDiscussions().add(comment);
         group.getDiscussions().add(comment2);
         group.getDiscussions().add(comment3);
-        group.getDiscussions().add(rebuttal);
-
+        // new group2 used
+        group2.getDiscussions().add(rebuttal);
+        // nesting groups in groups
+        group.getDiscussions().add(group2);
+        // list out all comments
         group.listComments();
 
-        DiscussionIterator it = new DiscussionIterator((java.util.List<Discussion>) group);
-        if (it.hasNext()){
-            System.out.println(it.next());
-        }
+//        DiscussionIterator it = new DiscussionIterator((java.util.List<Discussion>) group);
+//        if (it.hasNext()){
+//            System.out.println(it.next());
+//        }
 
 
     }

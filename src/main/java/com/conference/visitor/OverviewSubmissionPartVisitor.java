@@ -7,7 +7,6 @@ package main.java.com.conference.visitor;
  * Time: 16:16
  */
 public class OverviewSubmissionPartVisitor implements SubmissionPartVisitor {
-
     @Override
     public void visit(SubmissionPart submissionPart) {
         System.out.println("Summary details : " + submissionPart);

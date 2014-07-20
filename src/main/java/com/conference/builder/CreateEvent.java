@@ -1,7 +1,6 @@
 package main.java.com.conference.builder;
 
 import main.java.com.conference.User;
-import main.java.com.conference.licence.General;
 
 import java.io.BufferedReader;
 import java.io.IOException;

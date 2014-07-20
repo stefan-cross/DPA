@@ -8,7 +8,7 @@ package main.java.com.conference.state;
  */
 public class Client {
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         Login login = new Login();
 
         login.loggedin();
